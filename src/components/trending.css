@@ -1,0 +1,39 @@
+.sliderDiv{
+    width: 100vm  ;
+    overflow: hidden;
+}
+
+
+
+
+
+.slider{
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.slider:hover{
+
+    animation-play-state: paused;
+}
+
+
+
+
+@keyframes scroll{
+
+  0%{
+      transform: translateX(0);
+  }
+
+  100%{
+      transform: translateX(calc(-250px * 9));
+  }
+
+
+}
