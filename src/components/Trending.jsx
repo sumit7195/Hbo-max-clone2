@@ -28,7 +28,9 @@ const Trending = (props) => {
               key={i}
               class=" slide-track  hover:cursor-pointer   hover:opacity-75    shadow-inner shadow-blue-500/40 hover:shadow-indigo-500/40 border-2"
               onClick={() => {
-                navigate("/movieDetail", { state: e });
+                navigate("/movieDetail", {
+                  state: { id: e.id, type: "movie" },
+                });
               }}
             >
               <img

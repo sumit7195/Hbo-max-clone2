@@ -20,7 +20,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <div class="flex flex-row fixed z-10  bg-transparent mb-[2rem]  w-[100%] items-center  hover:bg-navbac  mb-[2rem] ... ">
+      <div class="flex flex-row fixed z-10  bg-transparent mb-[2rem]  w-[100%] items-center   hover:cursor-pointer   hover:bg-navbac  mb-[2rem] ... ">
         <div class="m-1 flex flex-row ml-14">
           <img
             onClick={showSidebar}

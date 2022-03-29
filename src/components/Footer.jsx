@@ -7,7 +7,7 @@ export const Footer = ()=>{
 
   return (
       
-     <div class=" mt-2 w-12/12 h-[38rem]  border-2  bg-gradient-to-r from-bg1  via-bg2  to-bg3  ...">
+     <div class=" mt-4  w-12/12 h-[38rem]  border-2  bg-gradient-to-r from-bg1  via-bg2  to-bg3  ...">
     <div class="bg-no-repeat bg-center h-[40rem] ..."  style={{ 
       backgroundImage: `url(${background})` 
     }}>

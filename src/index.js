@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 // import {AuthContextProvider} from './context/AuthContext.jsx'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import {MovieDetail} from "./components/MovieDetail"
+import MovieDetail from "./components/MovieDetail"
 import {Provider} from "react-redux"
 import store from "./redux/store"
 ReactDOM.render(
