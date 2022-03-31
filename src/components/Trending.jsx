@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetch } from "../redux/action";
 import { useSelector } from "react-redux";
+const apiKey = process.env.API_KEY
 
+console.log(apiKey)
 const Trending = (props) => {
   // const [movie,setMovie] = useState();
 

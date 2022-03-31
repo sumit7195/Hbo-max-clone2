@@ -1,14 +1,19 @@
 import { useState } from "react";
 import * as AiIcons from "react-icons/ai";
+import { searchMovieDetail } from "../redux/action";
 import Login from "../components/Login";
-
 import "./Navbar.css";
+import { useEffect } from "react";
+import { connect } from "react-redux";
 // import { SidebarData } from "./SidebarData";
-
-export const Navbar = () => {
+const Navbar = (props) => {
   const [search, setSearch] = useState(false);
   const [sidebar, setSidebar] = useState(false);
   const [showlogin, setLogin] = useState(false);
+
+  const searchMovie = (query) => {
+    props.searchMovieDetail(query);
+  };
 
   const showSidebar = () => {
     setSidebar(!sidebar);
@@ -20,7 +25,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <div class="flex flex-row fixed z-10  bg-transparent mb-[2rem]  w-[100%] items-center   hover:cursor-pointer   hover:bg-navbac  mb-[2rem] ... ">
+      <div class="flex flex-row absolute z-10  bg-transparent mb-[2rem]  w-[100%] items-center   hover:cursor-pointer   hover:bg-navbac  mb-[2rem] ... ">
         <div class="m-1 flex flex-row ml-14">
           <img
             onClick={showSidebar}
@@ -170,6 +175,9 @@ export const Navbar = () => {
                 type="text"
                 class="w-[18rem] h-[2.5rem] rounded-md mt-[0.5rem] "
                 placeholder="what are you looking for?"
+                onChange={(e) => {
+                  searchMovie(e.target.value);
+                }}
               />
             </div>
           ) : (
@@ -201,3 +209,5 @@ export const Navbar = () => {
     </>
   );
 };
+
+export default connect(null, { searchMovieDetail })(Navbar);

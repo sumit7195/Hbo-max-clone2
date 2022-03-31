@@ -3,17 +3,13 @@ import "./App.css";
 import background from "./images/background/background.png";
 import { Footer } from "./components/Footer";
 import { Home } from "./components/Home";
-import { Navbar } from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import Trending from "./components/Trending";
 import Popular from "./components/Popular";
-
+import Searchresult from "./components/SearchResult";
 
 function App() {
-    
-  
-
-    return (
-  
+  return (
     <div
       class=" bg-center h-full "
       style={{ backgroundImage: `url(${background})` }}
@@ -24,18 +20,14 @@ function App() {
       />
 
       <Navbar></Navbar>
+      <Searchresult></Searchresult>
       <Home></Home>
+
       <Trending></Trending>
       <Popular></Popular>
       <Footer></Footer>
     </div>
-
-
-  )     
-
-
-
-
+  );
 }
 
 export default App;
